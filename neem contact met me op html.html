@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My portfolio</title>
+        <link rel="stylesheet" type="text/CSS" href="portfolio gezamelijk css.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+          function goBack() {
+              window.history.back()
+                }
+        </script>
+
+        <script>
+          html.body{
+            min-height: 100% ;
+            max-width: auto;
+            background-size: cover;
+            }
+
+        body{
+            height: 100%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(#23E223,#064E17);
+            background-image: -moz-linear-gradient(#23E223,#064E17) no-repeat;
+            background-image: -ms-linear-gradient(#23E223,#064E17) no-repeat;
+            background-image: -webkit-linear-gradient(#23E223,#064E17) no-repeat;
+            background-image: -webkit-linear-gradient(#23E223,#064E17) no-repeat;
+            background-image: -o-linear-gradient(#23E223,#064E17)) no-repeat;
+            background-image:  linear-gradient(#23E223,#064E17) no-repeat;
+            }
+        </script>
+
+        <?php
+
+        // formulier moet gepost zijn:
+
+        if()!isset($_POST["submit"]))
+          {echo:"Vergeet niet het formulier te versturen";
+            }
+
+          $name = $_POST['name'];
+          $visitor_email = $_POST['email'];
+          $message = $_POST['message'];
+          $message = wordwrap($message, 70, "\r\n");
+
+          //valideren dat velden ingevuld zijn
+
+          if(empty($name)|| empty ($visitor_email))
+              { echo: "naam of email niet ingevuld";
+                exit;
+              }
+
+          $email_from = 'jacomijnsteen@gmail.com';
+          $email_subject = "bezoeker portfolio";
+          $email_body = "Bericht via portfolio van $name.\n"
+                        "zijn of haar mailadres is: $visitor_email\n"
+                        "Dit is het bericht: $message " ;
+          $to="jacomijnsteen@gmail.com";
+
+          //mailsturen naar mijzelf
+
+          mail($to,$email_subject,$email_body,)
+
+          //mail sturen naar afzender van bericht
+
+          $to_v = $visitor_email;
+          $email_subject_v = "van Jacomijn Steen";
+          $email_body_v = "Bedankt voor het sturen van dit bericht.\"
+                          "Jacomijn Steen zal zo snel mogelijk contact met u opnemen via dit mailadres.";
+
+          Mail($to_v, $email_subject_v, $email_body_v)
+
+          //en nu maar hopen dat alles werkt.
+
+          ?>
+
+    </head>
+
+    <body>
+
+      <div class="formulier">
+      <a href="mailto:jacomijnsteen@gmail.com?Subject="reageer">reageer per email</a>
+      </div>
+
+    <button onclick="goBack()">terug</button>
+
+    </body>
+</html>

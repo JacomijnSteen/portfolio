@@ -1,0 +1,125 @@
+
+
+header{
+  font-size: 18pt;
+  text-shadow: 2px 2px 5px #333333;
+  text-align: center;
+  height: 15%;
+      }
+
+.wrap{
+  height:80%;
+}
+
+.list{
+  position:absolute;
+  top:20%;
+  left: 5%;
+  margin: 0px 0px 0px 0px;
+  }
+
+a {
+  font-size: 28pt;
+  text-decoration: none;
+  }
+
+a:hover{
+    color:black;
+  	 }
+
+.profielfoto{
+    width: 350px;
+    height: 550px;
+    position: absolute;
+    top:15%;
+    right:5%;
+    bottom:15%;
+    margin: 0px 0px 0px 0px;
+    background-image: url("https://i.imgur.com/gYxPq9p.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.contactme{
+  width: 500px;
+  height: 150px;
+  position: absolute;
+  top:75%;
+  left:5%;
+  margin: auto;
+  text-align: center;
+    }
+
+.footer{
+    position:absolute;
+    bottom:0%;
+    float: left;
+    width: 100%;
+    height:5%;
+    text-align: center;
+         }
+
+button{
+   position: absolute;
+   top: 80%;
+   left:3%;
+   }
+
+.formulier{
+     height: 500px;
+     width: 500px;
+     position: absolute;
+     top: 40%;
+     left:30%;
+     }
+
+p{
+  font-family: Florence, cursive;
+  font-size: large;
+  }
+
+  html.body{
+    min-height: 100% ;
+    max-width: auto;
+    background-size: cover;
+}
+
+body{
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#23E223,#064E17);
+    background-image: -moz-linear-gradient(#23E223,#064E17) no-repeat;
+    background-image: -ms-linear-gradient(#23E223,#064E17) no-repeat;
+    background-image: -webkit-linear-gradient(#23E223,#064E17) no-repeat;
+    background-image: -webkit-linear-gradient(#23E223,#064E17) no-repeat;
+    background-image: -o-linear-gradient(#23E223,#064E17)) no-repeat;
+    background-image:  linear-gradient(#23E223,#064E17) no-repeat;
+    }
+
+p{
+   font-family: Florence, cursive;
+   font-size: large;
+  }
+
+.row {
+  float:left;
+  width:33,33%;
+  height:200px;
+    }
+
+@media only screen and (max-width: 600px) {
+          .row{float:top;}
+            }
+
+
+@media only screen and (max-width: 400px) {
+                  ul a {font-size: 10pt;}
+                  .profielfoto{ display:none;}
+                }
+
+@media only screen and (max-width: 600px) {
+          ul a {font-size: 20pt;}
+          .profielfoto{ display:none;}
+        }
